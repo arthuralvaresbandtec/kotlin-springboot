@@ -1,4 +1,4 @@
-package com.c6bank.springkotlin.domain
+package com.c6bank.springkotlin.controller
 
 import com.c6bank.springkotlin.models.Client
 import com.c6bank.springkotlin.repository.ClientRepository
@@ -9,13 +9,13 @@ import java.util.*
 
 @RestController
 @RequestMapping("/client")
-class DomainClient {
+class ControllerClient {
 
     @Autowired
     lateinit var repository : ClientRepository
 
     @GetMapping
-    fun getClient(): ResponseEntity<List<Client>>{
+    fun getClients(): ResponseEntity<List<Client>>{
         if(repository.count() > 0){
             return ResponseEntity.ok(repository.findAll())
         }

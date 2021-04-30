@@ -1,4 +1,4 @@
-package com.c6bank.springkotlin.domain
+package com.c6bank.springkotlin.controller
 
 import com.c6bank.springkotlin.models.Client
 import com.c6bank.springkotlin.repository.ClientRepository
@@ -9,7 +9,7 @@ import java.util.*
 
 @RestController
 @RequestMapping("/ops")
-class DomainOperations {
+class ControllerOperations {
 
     @Autowired
     lateinit var repositoryOps : ClientRepository
